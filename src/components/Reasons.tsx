@@ -15,22 +15,31 @@ export function Reasons({ reasons }: ReasonsProps) {
   return (
     <div className="space-y-4">
       {reasons.map((reason, index) => (
-        <div 
+        <motion.div 
           key={index}
-          className="bg-white rounded-xl overflow-hidden border border-red-50 shadow-sm"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.05 }}
+          className="glass rounded-2xl overflow-hidden border border-white/10 hover:border-pink-500/30 transition-all duration-300"
+          style={{
+            background: 'linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(20, 20, 20, 0.6) 100%)'
+          }}
         >
           <button
             onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-            className="w-full flex items-center justify-between p-4 text-left hover:bg-red-50/50 transition-colors"
+            className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
           >
-            <span className="font-serif text-lg text-red-900 flex items-center gap-3">
-              <Heart className={clsx("w-4 h-4", expandedIndex === index ? "fill-red-500 text-red-500" : "text-red-300")} />
-              Reason #{index + 1}
+            <span className="font-serif text-xl text-white flex items-center gap-4">
+              <Heart className={clsx("w-5 h-5 transition-all", expandedIndex === index ? "fill-pink-500 text-pink-500 scale-110" : "text-pink-400/50")} />
+              <span className={clsx("transition-colors", expandedIndex === index && "text-pink-400")}>
+                Reason #{index + 1}
+              </span>
             </span>
             <ChevronDown 
               className={clsx(
-                "w-5 h-5 text-red-300 transition-transform duration-300",
-                expandedIndex === index && "rotate-180"
+                "w-6 h-6 text-pink-400/60 transition-transform duration-300",
+                expandedIndex === index && "rotate-180 text-pink-400"
               )} 
             />
           </button>
@@ -43,13 +52,13 @@ export function Reasons({ reasons }: ReasonsProps) {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="p-4 pt-0 text-stone-600 leading-relaxed">
+                <div className="px-6 pb-6 pt-0 text-gray-300 leading-relaxed text-lg border-t border-white/5 mt-2 pt-4">
                   {reason}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

@@ -97,10 +97,10 @@ export function Confetti({ triggerText }: ConfettiProps) {
     <>
       <button
         onClick={fireConfetti}
-        className="inline-flex items-center gap-2 px-6 py-4 border-2 border-red-200 text-red-800 font-serif text-lg rounded-full hover:bg-red-50 transition-colors"
+        className="inline-flex items-center gap-3 px-10 py-5 border-2 border-pink-500/30 text-pink-400 font-serif text-lg rounded-full hover:bg-pink-500/10 hover:border-pink-500/50 transition-all hover:scale-105 active:scale-95 backdrop-blur-sm"
       >
-        <Heart className="w-5 h-5 text-red-500" />
-        {triggerText}
+        <Heart className="w-6 h-6 text-pink-500" />
+        <span className="font-semibold tracking-wide">{triggerText}</span>
       </button>
       
       {isActive && (
