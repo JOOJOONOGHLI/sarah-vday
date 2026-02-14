@@ -25,8 +25,8 @@ const reasonsILoveYou = [
   "Your kindness towards everyone you meet.",
   "The way your eyes light up when you talk about your passions.",
   "How safe I feel when I'm with you.",
-  "Your incredible cooking (and patience with my cooking).",
-  "The little notes you leave for me.",
+  "That you always want to leave things on a happy note",
+  "Your hard work and dedication to your craft",
   "Just being you, every single day."
 ];
 
