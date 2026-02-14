@@ -35,7 +35,7 @@ const favoriteMemories = [
   { date: "2", description: "Asking you to be my girlfriend in front of Steak 48", image: "/memories/Steak48.png" },
   { date: "3", description: "Big game when I convinced you to match the Stanford Dad/Cal mom theme", image: "/memories/big_game.jpg" },
   { date: "4", description: "NYE where shay was incredibly mast", image: "/memories/NYE.png" },
-  { date: "5", description: "Shay and Shay trip to Carmel when I had too many Celsius drinks and nearly died", image: "/memories/carmel.jpeg" },
+  { date: "5", description: "Shay and Shay trip to Carmel when I had too many Celsius drinks and nearly died", image: "/memories/carmel.png" },
   { date: "6", description: "Your bday at Bacari Beverly when I was terrible at hiding the surprise", image: "/memories/bacari.jpg" },
   { date: "7", description: "Last Valentines day when you blew my mind with my favorite hoodie of all time (McLaren Hoodie)", image: "/memories/lastvday.png" },
   { date: "8", description: "Having Fuki Sushi, I just had to add it here because it was so gas and I miss it", image: "/memories/fuki.png" },
